@@ -22,7 +22,7 @@ export const useFetch = url => {
 	useEffect(() => {
 		setState({ data: null, loading: true });
 		fetch(url)
-			.then(x => x.text())
+			.then(x => x.json())
 			.then(y => {
 				setState({ data: y, loading: false });
 			});
